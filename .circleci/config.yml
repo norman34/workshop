@@ -6,6 +6,11 @@ workflows:
     jobs:
 
       - build
+      - deploy_production:
+
+         requires:
+
+          - build
       
 
 jobs:
@@ -19,3 +24,4 @@ jobs:
 
       - checkout
       - run: yarn install
+      - run: yarn test
