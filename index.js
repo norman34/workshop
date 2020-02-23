@@ -4,6 +4,7 @@ const app = express()
 const port = process.env.PORT || 8080
 
 var entries = []
+
 app.get('/', (request, response) => {
     const html = `
     <html>
